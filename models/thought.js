@@ -4,22 +4,21 @@ const reactionSchema = require('./Reaction');
 // Schema to create Student model
 const thoughtSchema = new Schema(
   {
-    first: {
+    thoughtText: {
       type: String,
       required: true,
-      max_length: 50,
+      max_length: 280,
     },
-    last: {
+    createdAt: {
+      type: Date,
+      default: Date.now(),
+      get: ()=> Date.now(),
+    },
+    username: {
       type: String,
       required: true,
-      max_length: 50,
     },
-    github: {
-      type: String,
-      required: true,
-      max_length: 50,
-    },
-    assignments: [reactionSchema],
+    reactions: [reactionSchema],
   },
   {
     toJSON: {
@@ -27,6 +26,10 @@ const thoughtSchema = new Schema(
     },
   }
 );
+
+thoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
+  });
 
 const Thought = model('thought', thoughtSchema);
 
