@@ -36,7 +36,7 @@ module.exports = [
                 username: 'devGuy',
             },
             {
-                reactionBody: 'I watch it while i cook!!',
+                reactionBody: 'I watch it while I cook!!',
                 username: 'cookingGuy',
             },
         ],
