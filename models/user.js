@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-
+const friendSchema = require('./Friend');
 // Schema to create a course model
 const userSchema = new Schema(
   {
