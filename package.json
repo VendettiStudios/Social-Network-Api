@@ -1,12 +1,14 @@
 {
   "dependencies": {
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
   },
   "name": "social_network_api_main",
   "version": "1.0.0",
