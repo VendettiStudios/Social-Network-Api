@@ -42,5 +42,5 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## Author
 ​
-- [Daniel Hollowya](https://DanielHolloway.dev)
+- [Daniel Holloway](https://DanielHolloway.dev)
 
